@@ -7,14 +7,14 @@
 
     <title>{{ config('app.name', 'Argon Dashboard') }}</title>
     <!-- Favicon -->
-    <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
+    <link href="{{ asset('/img/brand/favicon.png') }}" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
-    <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-    <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('/vendor/nucleo/css/nucleo.css') }}" rel="stylesheet">
+    <link href="{{ asset('/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Argon CSS -->
-    <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
+    <link type="text/css" href="{{ asset('/css/argon.css?v=1.0.0') }}" rel="stylesheet">
            <!-- Extra details for Live View on GitHub Pages -->
     <!-- Canonical SEO -->
     <link rel="canonical" href="https://www.creative-tim.com/product/argon-dashboard-laravel" />
@@ -71,7 +71,7 @@
     </button>
     <!-- Brand -->
     <a class="navbar-brand pt-0" href="{{ route('home') }}">
-        <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        <img src="{{ asset('/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
     </a>
     <!-- User -->
     <ul class="nav align-items-center d-md-none">
@@ -79,7 +79,7 @@
             <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                     <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-1-800x800.jpg">
+                    <img alt="Image placeholder" src="{{ asset('/img/theme/team-1-800x800.jpg') }}">
                     </span>
                 </div>
             </a>
@@ -119,7 +119,7 @@
             <div class="row">
                 <div class="col-6 collapse-brand">
                     <a  href="{{ route('home') }}">
-                        <img src="{{ asset('argon') }}/img/brand/blue.png">
+                        <img src="{{ asset('/img/brand/blue.png') }}">
                     </a>
                 </div>
                 <div class="col-6 collapse-close">
@@ -240,7 +240,7 @@
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                     <span class="avatar avatar-sm rounded-circle">
-                        <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-4-800x800.jpg">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-4-800x800.jpg') }}">
                     </span>
                     <div class="media-body ml-2 d-none d-lg-block">
                         <span class="mb-0 text-sm  font-weight-bold">Admin Admin</span>
@@ -463,10 +463,10 @@
     </div>
 
     
-    <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('/vendor/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     
             
     <!-- Argon JS -->
-    <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
+    <script src="{{ asset('/js/argon.js?v=1.0.0') }}"></script>
 </body></html>
