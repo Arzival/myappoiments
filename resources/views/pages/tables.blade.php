@@ -23,14 +23,14 @@
   <meta name="author" content="Creative Tim">
   <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
   <!-- Favicon -->
-  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="{{ asset('/img/brand/favicon.png') }}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
-  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/vendor/nucleo/css/nucleo.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
   <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/css/argon.css?v=1.2.0') }}" type="text/css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -186,7 +186,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -205,7 +205,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -224,7 +224,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -243,7 +243,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -262,7 +262,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-5.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-5.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -333,7 +333,7 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -422,7 +422,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/bootstrap.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Argon Design System</span>
@@ -441,16 +441,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -481,7 +481,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/angular.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/angular.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Angular Now UI Kit PRO</span>
@@ -500,16 +500,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -540,7 +540,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/sketch.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/sketch.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Black Dashboard</span>
@@ -559,16 +559,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -599,7 +599,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/react.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/react.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">React Material Dashboard</span>
@@ -618,16 +618,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -658,7 +658,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/vue.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Vue Paper UI Kit PRO</span>
@@ -677,16 +677,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -769,7 +769,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/bootstrap.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Argon Design System</span>
@@ -788,16 +788,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -828,7 +828,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/angular.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/angular.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Angular Now UI Kit PRO</span>
@@ -847,16 +847,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -887,7 +887,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/sketch.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/sketch.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Black Dashboard</span>
@@ -906,16 +906,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -946,7 +946,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/react.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/react.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">React Material Dashboard</span>
@@ -965,16 +965,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -1005,7 +1005,7 @@
                     <th scope="row">
                       <div class="media align-items-center">
                         <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/vue.jpg') }}">
                         </a>
                         <div class="media-body">
                           <span class="name mb-0 text-sm">Vue Paper UI Kit PRO</span>
@@ -1024,16 +1024,16 @@
                     <td>
                       <div class="avatar-group">
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}">
                         </a>
                         <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                          <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                          <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                         </a>
                       </div>
                     </td>
@@ -1100,13 +1100,13 @@
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
-  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <script src="{{ asset('/vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('/vendor/js-cookie/js.cookie.js') }}"></script>
+  <script src="{{ asset('/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
+  <script src="{{ asset('/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
   <!-- Argon JS -->
-  <script src="../assets/js/argon.js?v=1.2.0"></script>
+  <script src="{{ asset('/js/argon.js?v=1.2.0') }}"></script>
 </body>
 
 </html>

@@ -41,7 +41,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -187,7 +187,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -206,7 +206,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-2.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -225,7 +225,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-3.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -244,7 +244,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -263,7 +263,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-5.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-5.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -334,7 +334,7 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('/img/theme/team-4.jpg') }}">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -1253,15 +1253,15 @@
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
-  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <script src="{{ asset('/vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('/vendor/js-cookie/js.cookie.js') }}"></script>
+  <script src="{{ asset('/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
+  <script src="{{ asset('/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
   <!-- Optional JS -->
-  <script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
+  <script src="{{ asset('/vendor/clipboard/dist/clipboard.min.js') }}"></script>
   <!-- Argon JS -->
-  <script src="../assets/js/argon.js?v=1.2.0"></script>
+  <script src="{{ asset('/js/argon.js?v=1.2.0') }}"></script>
 </body>
 
 </html>
