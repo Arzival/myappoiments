@@ -33,7 +33,13 @@ Route::get('/table', function () {
     return view('pages.tables');
 })->name('table');
 
+Route::get('/upgrade', function () {
+    return view('pages.upgrade');
+})->name('upgrade');
+
 Route::get('/perfil/editar','App\Http\Controllers\ProfileController@edit')->name('profile.edit');
+Route::post('/perfil/update','App\Http\Controllers\ProfileController@update')->name('profile.update');
+Route::post('/perfil/password','App\Http\Controllers\ProfileController@password')->name('profile.password');
 
 
 Auth::routes();
