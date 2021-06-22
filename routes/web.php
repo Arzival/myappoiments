@@ -45,3 +45,9 @@ Route::post('/perfil/password','App\Http\Controllers\ProfileController@password'
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Routs Specialties
+Route::get('/specialties','App\Http\Controllers\SpecialtyController@index')->name('specialty.index');
+Route::get('/specialties/create','App\Http\Controllers\SpecialtyController@create')->name('specialty.create');
+Route::get('/specialties/{id}/edit','App\Http\Controllers\SpecialtyController@edit')->name('specialty.edit');
+Route::post('/specialties/store','App\Http\Controllers\SpecialtyController@store')->name('specialty.store');
