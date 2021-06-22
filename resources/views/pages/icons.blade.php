@@ -44,8 +44,9 @@
 
 <body>
     <!-- Sidenav -->
-    @include('nav')
-    @include('layouts.navbars.sidebar')
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+        @include('layouts.navbars.sidebar')
+      </nav>
     <!-- Main content -->
     <div class="main-content" id="panel">
         <!-- Topnav -->
@@ -128,7 +129,7 @@
                                                     <div>
                                                         <h4
                                                             class="mb-0 text-sm">
-                                                            John Snow</h4>
+                                                            {{ auth()->user()->name }}</h4>
                                                     </div>
                                                     <div
                                                         class="text-right text-muted">
@@ -156,7 +157,7 @@
                                                     <div>
                                                         <h4
                                                             class="mb-0 text-sm">
-                                                            John Snow</h4>
+                                                            {{ auth()->user()->name }}</h4>
                                                     </div>
                                                     <div
                                                         class="text-right text-muted">
@@ -184,7 +185,7 @@
                                                     <div>
                                                         <h4
                                                             class="mb-0 text-sm">
-                                                            John Snow</h4>
+                                                            {{ auth()->user()->name }}</h4>
                                                     </div>
                                                     <div
                                                         class="text-right text-muted">
@@ -212,7 +213,7 @@
                                                     <div>
                                                         <h4
                                                             class="mb-0 text-sm">
-                                                            John Snow</h4>
+                                                            {{ auth()->user()->name }}</h4>
                                                     </div>
                                                     <div
                                                         class="text-right text-muted">
@@ -240,7 +241,7 @@
                                                     <div>
                                                         <h4
                                                             class="mb-0 text-sm">
-                                                            John Snow</h4>
+                                                            {{ auth()->user()->name }}</h4>
                                                     </div>
                                                     <div
                                                         class="text-right text-muted">
@@ -330,8 +331,7 @@
                                     <div
                                         class="media-body  ml-2  d-none d-lg-block">
                                         <span
-                                            class="mb-0 text-sm  font-weight-bold">John
-                                            Snow</span>
+                                            class="mb-0 text-sm  font-weight-bold">{{ auth()->user()->name }}</span>
                                     </div>
                                 </div>
                             </a>
