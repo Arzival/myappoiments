@@ -35,7 +35,11 @@ class SpecialtyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Specialty::create([
+            'name' => $request['name'],
+            'description' => $request['description'],
+        ]);
+        return back();
     }
 
     /**
