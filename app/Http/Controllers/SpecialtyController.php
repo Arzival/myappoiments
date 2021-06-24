@@ -74,7 +74,12 @@ class SpecialtyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Specialty::where('id',$id)->update([
+            'name' => $request['name'],
+            'description' => $request['description'],
+        ]);
+
+        return redirect()->route('specialty.index');
     }
 
     /**
