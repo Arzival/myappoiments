@@ -35,7 +35,9 @@
             style="display: none;">
             @csrf
         </form>
-        @include('layouts.navbars.sidebar')
+        <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+            @include('layouts.navbars.sidebar')
+          </nav>
     @endauth
 
     <div class="main-content">
