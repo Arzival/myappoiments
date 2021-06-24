@@ -14,15 +14,15 @@
                 </div>
             </div>
                     <div class="card-body">
-                        <form action="{{ route('specialty.store') }}" method="POST">
-                            @csrf
+                        <form action="{{ route('specialty.update',$specialty) }}" method="POST">
+                            @csrf @method('PATCH')
                                   <div class="form-group">
                                             <label for="name">Nombre de la especialidad</label>
-                                            <input type="text" name="name" class="form-control" required>
+                                            <input type="text" name="name" class="form-control" required value="{{ $specialty->name }}">
                                   </div>
                                   <div class="form-group">
                                            <label for="description">Descripcion de la especialidad</label>
-                                           <input type="text" name="description" class="form-control">
+                                           <input type="text" name="description" class="form-control" value="{{ $specialty->description }}"">
                                  </div>
                                  <button type="submit" class="btn btn-primary">Guardar</button>
                         </form>

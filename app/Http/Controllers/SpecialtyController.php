@@ -14,7 +14,8 @@ class SpecialtyController extends Controller
      */
     public function index()
     {
-        return view('specialties.index');
+        $specialties = Specialty::all(); 
+        return view('specialties.index', compact('specialties'));
     }
 
     /**
@@ -59,9 +60,9 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function edit(Specialty $specialty)
+    public function edit($id)
     {
-        //
+        return view('specialties.edit',['specialty' => Specialty::findorFail($id)]);
     }
 
     /**
@@ -71,7 +72,7 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Specialty $specialty)
+    public function update(Request $request, $id)
     {
         //
     }

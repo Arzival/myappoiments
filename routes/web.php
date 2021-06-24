@@ -50,4 +50,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/specialties','App\Http\Controllers\SpecialtyController@index')->name('specialty.index');
 Route::get('/specialties/create','App\Http\Controllers\SpecialtyController@create')->name('specialty.create');
 Route::get('/specialties/{id}/edit','App\Http\Controllers\SpecialtyController@edit')->name('specialty.edit');
+
 Route::post('/specialties/store','App\Http\Controllers\SpecialtyController@store')->name('specialty.store');
+Route::patch('/specialties/{id}','App\Http\Controllers\SpecialtyController@update')->name('specialty.update');
+Route::delete('/specialties/{id}','App\Http\Controllers\SpecialtyController@destroy')->name('specialty.destroy');

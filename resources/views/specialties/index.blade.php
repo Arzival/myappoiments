@@ -9,7 +9,8 @@
                         <h3 class="mb-0">Especialidas</h3>
                     </div>
                     <div class="col text-right">
-                        <a href="{{ route('specialty.create') }}" class="btn btn-sm btn-success">Nueva Especialidad</a>
+                        <a href="{{ route('specialty.create') }}"
+                            class="btn btn-sm btn-success">Nueva Especialidad</a>
                     </div>
                 </div>
             </div>
@@ -21,24 +22,32 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Opciones</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">
-                                /argon/
-                            </th>
-                            <td>
-                                4,569
-                            </td>
-                            <td>
-                                <a href="" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="" class="btn btn-sm btn-danger">Eliminar</a>
-                            </td>
-                           
-                        </tr>
-                       
+
+                        @forelse ($specialties as $specialty)
+                            <tr>
+                                <th scope="row">
+                                    {{ $specialty->name }}
+                                </th>
+                                <td>
+                                    {{ $specialty->description }}
+                                </td>
+                                <td>
+                                    <a href="{{ route('specialty.edit', $specialty) }}"
+                                        class="btn btn-sm btn-primary">Editar</a>
+                                    <a href=""
+                                        class="btn btn-sm btn-danger">Eliminar</a>
+                                </td>
+
+                            </tr>
+                        @empty
+                            <h3>No hay especialidades registradas</h3>
+                        @endforelse
+
+
                     </tbody>
                 </table>
             </div>
