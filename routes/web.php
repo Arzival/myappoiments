@@ -53,4 +53,4 @@ Route::get('/specialties/{id}/edit','App\Http\Controllers\SpecialtyController@ed
 
 Route::post('/specialties/store','App\Http\Controllers\SpecialtyController@store')->name('specialty.store');
 Route::patch('/specialties/{id}','App\Http\Controllers\SpecialtyController@update')->name('specialty.update');
-Route::delete('/specialties/{id}','App\Http\Controllers\SpecialtyController@destroy')->name('specialty.destroy');
+Route::delete('/specialties/{id}/delete','App\Http\Controllers\SpecialtyController@destroy')->name('specialty.destroy');

@@ -88,8 +88,9 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Specialty $specialty)
+    public function destroy($id)
     {
-        //
+        Specialty::where('id',$id)->delete();
+        return redirect()->route('specialty.index');
     }
 }

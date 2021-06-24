@@ -38,8 +38,11 @@
                                 <td>
                                     <a href="{{ route('specialty.edit', $specialty) }}"
                                         class="btn btn-sm btn-primary">Editar</a>
-                                    <a href=""
-                                        class="btn btn-sm btn-danger">Eliminar</a>
+                                        <form style="display: inline" action="{{ route('specialty.destroy', $specialty) }}" method="POST">
+                                            @csrf @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                        </form>
+                                    
                                 </td>
 
                             </tr>
