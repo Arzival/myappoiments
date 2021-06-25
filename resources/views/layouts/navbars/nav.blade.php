@@ -28,12 +28,12 @@
                     </li>
                     <h6 class="navbar-heading text-muted">Gestionar Datos</h6>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('icons') }}">
+                        <a class="nav-link" href="{{ route('specialty.index') }}">
                             <i class="ni ni-planet text-blue"></i> {{ __('Especialidades') }}
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{ route('map') }}">
+                        <a class="nav-link" href="{{ route('doctors.index') }}">
                             <i class="ni ni-pin-3 text-orange"></i> {{ __('Medicos') }}
                         </a>
                     </li>

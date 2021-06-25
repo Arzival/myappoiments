@@ -6,19 +6,19 @@
             <div class="card-header border-0">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="mb-0">Especialidas</h3>
+                        <h3 class="mb-0">Medicos</h3>
                     </div>
                     <div class="col text-right">
-                        <a href="{{ route('specialty.create') }}"
-                            class="btn btn-sm btn-success">Nueva Especialidad</a>
+                        <a href="{{ route('doctors.create') }}"
+                            class="btn btn-sm btn-success">Nueva Medico</a>
                     </div>
                 </div>
             </div>
             <div class="card-body">
                 @if (session('notification'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('notification') }}
-                </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('notification') }}
+                    </div>
                 @endif
             </div>
             <div class="table-responsive">
@@ -27,29 +27,36 @@
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Descripción</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">DNI</th>
                             <th scope="col">Opciones</th>
 
                         </tr>
                     </thead>
                     <tbody>
 
-                        @forelse ($specialties as $specialty)
+                        @forelse ($doctors as $doctor)
                             <tr>
                                 <th scope="row">
-                                    {{ $specialty->name }}
+                                    {{ $doctor->name }}
                                 </th>
                                 <td>
-                                    {{ $specialty->description }}
+                                    {{ $doctor->email }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('specialty.edit', $specialty) }}"
+                                        {{ $doctor->dni }}
+                                </td>
+                                <td>
+                                    <a href="{{ route('doctors.edit', $doctor) }}"
                                         class="btn btn-sm btn-primary">Editar</a>
-                                        <form style="display: inline" action="{{ route('specialty.destroy', $specialty) }}" method="POST">
-                                            @csrf @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                                        </form>
-                                    
+                                    <form style="display: inline"
+                                        action="{{ route('doctors.destroy', $doctor) }}"
+                                        method="POST">
+                                        @csrf @method('DELETE')
+                                        <button type="submit"
+                                            class="btn btn-sm btn-danger">Eliminar</button>
+                                    </form>
+
                                 </td>
 
                             </tr>

@@ -40,7 +40,8 @@ class SpecialtyController extends Controller
             'name' => $request['name'],
             'description' => $request['description'],
         ]);
-        return back();
+        $notification = 'Se agrego de forma correcta';
+        return redirect()->route('specialty.index')->with(compact('notification'));
     }
 
     /**
@@ -78,8 +79,8 @@ class SpecialtyController extends Controller
             'name' => $request['name'],
             'description' => $request['description'],
         ]);
-
-        return redirect()->route('specialty.index');
+        $notification = 'Se edito de forma correcta';
+        return redirect()->route('specialty.index')->with(compact('notification'));
     }
 
     /**
@@ -88,9 +89,10 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Specialty $specialty)
     {
-        Specialty::where('id',$id)->delete();
-        return redirect()->route('specialty.index');
+        Specialty::where('id',$specialty->id)->delete();
+        $notification = 'Se elimino '.$specialty->name.' de forma correcta';
+        return redirect()->route('specialty.index')->with(compact('notification'));
     }
 }
