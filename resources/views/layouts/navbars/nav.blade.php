@@ -34,7 +34,7 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="{{ route('doctors.index') }}">
-                            <i class="ni ni-pin-3 text-orange"></i> {{ __('Medicos') }}
+                            <i class="ni ni-pin-3 text-orange"></i> {{ __('Médicos') }}
                         </a>
                     </li>
                     <li class="nav-item">
