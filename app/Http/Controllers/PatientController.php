@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class DoctorController extends Controller
+class PatientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $doctors = User::where('role','doctor')->get();
-        return view('doctors.index',compact('doctors'));
+        //
     }
 
     /**
@@ -25,7 +23,7 @@ class DoctorController extends Controller
      */
     public function create()
     {
-        return view('doctors.create');
+        //
     }
 
     /**

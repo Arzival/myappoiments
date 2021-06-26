@@ -59,3 +59,4 @@ Route::delete('/specialties/{specialty}/delete','App\Http\Controllers\SpecialtyC
 Route::resource('doctors', 'App\Http\Controllers\DoctorController');
 
 // Patients
+Route::resource('patients', 'App\Http\Controllers\PatientController');
