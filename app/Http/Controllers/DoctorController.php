@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class DoctorController extends Controller
 {
@@ -43,6 +44,20 @@ class DoctorController extends Controller
             'phone' => 'min:6',
         ];
         $this->validate($request,$rules);
+
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'dni' => $request['dni'],
+            'addres' => $request['addres'],
+            'phone' => $request['phone'],
+            'password' =>  Hash::make($request['password']),
+            'role' => 'doctor',
+        ]);
+
+        $notification = 'Se agrego de forma correcta';
+
+        return redirect()->route('doctors.index')->with(compact('notification'));
     }
 
     /**
