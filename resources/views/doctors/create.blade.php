@@ -18,27 +18,32 @@
                             @csrf
                                   <div class="form-group">
                                             <label for="name">Nombre del médico</label>
-                                            <input type="text" name="name" class="form-control" required>
+                                            <input type="text" name="name" class="form-control" required value="{{ old('name') }}">
                                   </div>
                                   <div class="form-group">
                                            <label for="email">Correo</label>
-                                           <input type="text" name="email" class="form-control">
+                                           <input type="text" name="email" class="form-control" value="{{ old('email') }}">
                                  </div>
 
                                  <div class="form-group">
                                         <label for="dni">DNI</label>
-                                        <input type="text" name="dni" class="form-control">
+                                        <input type="text" name="dni" class="form-control" value="{{ old('dni') }}">
                               </div>
 
                               <div class="form-group">
                                         <label for="addres">Dirección</label>
-                                        <input type="text" name="addres" class="form-control">
+                                        <input type="text" name="addres" class="form-control" value="{{ old('addres') }}">
                               </div>
 
                               <div class="form-group">
                                         <label for="phone">Teléfono</label>
-                                        <input type="text" name="phone" class="form-control">
+                                        <input type="text" name="phone" class="form-control" value="{{ old('phone') }}">
                               </div>
+
+                              <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="text" name="password" class="form-control" value="{{ old('password',Str::random(8)) }}">
+                      </div>
                                  <button type="submit" class="btn btn-primary">Guardar</button>
                         </form>
                     </div>

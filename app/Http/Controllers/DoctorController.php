@@ -36,7 +36,13 @@ class DoctorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'name' => 'required|min:3',
+            'email' => 'required|email',
+            'addres' => 'min:3',
+            'phone' => 'min:6',
+        ];
+        $this->validate($request,$rules);
     }
 
     /**

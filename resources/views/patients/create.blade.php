@@ -17,7 +17,7 @@
                         <form action="{{ route('patients.store') }}" method="POST">
                             @csrf
                                   <div class="form-group">
-                                            <label for="name">Nombre del médico</label>
+                                            <label for="name">Nombre del Paciente</label>
                                             <input type="text" name="name" class="form-control" required>
                                   </div>
                                   <div class="form-group">
