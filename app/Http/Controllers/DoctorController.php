@@ -79,7 +79,7 @@ class DoctorController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('doctors.edit',['doctor' => User::findorFail($id)]);
     }
 
     /**
