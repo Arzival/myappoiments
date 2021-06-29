@@ -91,7 +91,28 @@ class DoctorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rules = [
+            'name' => 'required|min:3',
+            'email' => 'required|email',
+            'addres' => 'min:3',
+            'phone' => 'min:6',
+        ];
+
+        $this->validate($request,$rules);
+
+        User::where('id',$id)->update([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'dni' => $request['dni'],
+            'addres' => $request['addres'],
+            'phone' => $request['phone'],
+            'password' =>  Hash::make($request['password']),
+        ]);
+
+        
+        $notification = 'Se modifico de forma correcta';
+
+        return redirect()->route('doctors.index')->with(compact('notification'));
     }
 
     /**
@@ -102,6 +123,10 @@ class DoctorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::where('id',$id)->delete();
+
+        $notification = 'Se elimino de forma correcta';
+
+        return redirect()->route('doctors.index')->with(compact('notification'));
     }
 }

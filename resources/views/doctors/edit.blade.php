@@ -14,8 +14,8 @@
                 </div>
             </div>
                     <div class="card-body">
-                        <form action="{{ route('doctors.update',$doctor) }}" method="PATCH">
-                            @csrf
+                        <form action="{{ route('doctors.update',$doctor) }} " method="POST">
+                            @csrf @method('PATCH')
                                   <div class="form-group">
                                             <label for="name">Nombre del médico</label>
                                             <input type="text" name="name" class="form-control" required value="{{ $doctor->name }}">
