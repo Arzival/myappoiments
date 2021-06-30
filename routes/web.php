@@ -46,17 +46,18 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Routs Specialties
-Route::get('/specialties','App\Http\Controllers\SpecialtyController@index')->name('specialty.index');
-Route::get('/specialties/create','App\Http\Controllers\SpecialtyController@create')->name('specialty.create');
-Route::get('/specialties/{id}/edit','App\Http\Controllers\SpecialtyController@edit')->name('specialty.edit');
+Route::middleware(['auth','admin'])->group(function () {
+    //Routs Specialties
+    Route::get('/specialties','App\Http\Controllers\SpecialtyController@index')->name('specialty.index');
+    Route::get('/specialties/create','App\Http\Controllers\SpecialtyController@create')->name('specialty.create');
+    Route::get('/specialties/{id}/edit','App\Http\Controllers\SpecialtyController@edit')->name('specialty.edit');
 
-Route::post('/specialties/store','App\Http\Controllers\SpecialtyController@store')->name('specialty.store');
-Route::patch('/specialties/{id}','App\Http\Controllers\SpecialtyController@update')->name('specialty.update');
-Route::delete('/specialties/{specialty}/delete','App\Http\Controllers\SpecialtyController@destroy')->name('specialty.destroy');
+    Route::post('/specialties/store','App\Http\Controllers\SpecialtyController@store')->name('specialty.store');
+    Route::patch('/specialties/{id}','App\Http\Controllers\SpecialtyController@update')->name('specialty.update');
+    Route::delete('/specialties/{specialty}/delete','App\Http\Controllers\SpecialtyController@destroy')->name('specialty.destroy');
+    //Doctors
+    Route::resource('doctors', 'App\Http\Controllers\DoctorController');
+    // Patients
+    Route::resource('patients', 'App\Http\Controllers\PatientController');
+});
 
-//Doctors
-Route::resource('doctors', 'App\Http\Controllers\DoctorController');
-
-// Patients
-Route::resource('patients', 'App\Http\Controllers\PatientController');
