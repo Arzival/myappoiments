@@ -13,7 +13,10 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+        $days = [
+            'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'
+        ];
+        return view('schedule', compact('days'));
     }
 
     /**
@@ -56,7 +59,7 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        return view('schedule');
+
     }
 
     /**
