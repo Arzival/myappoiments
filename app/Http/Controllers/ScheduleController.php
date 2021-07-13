@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\WorkDay;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -37,7 +38,7 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        $active = $request['active'];
+        $active = $request['active'] ?: [];
         $morning_start = $request['morning_start'];
         $morning_end = $request['morning_end'];
         $afternoon_start = $request['afternoon_start'];
@@ -50,7 +51,7 @@ class ScheduleController extends Controller
                     'user_id' => auth()->user()->id,
                 ],
                 [
-                    'active' => ,
+                    'active' => in_array($i,$active),
                     'morning_start' => $morning_start[$i],
                     'morning_end' => $morning_end[$i],
                     'afternoon_start' => $afternoon_start[$i],
@@ -58,6 +59,8 @@ class ScheduleController extends Controller
                 ]
             );
         }
+
+        return back();
     }
 
     /**

@@ -50,8 +50,8 @@
                                                                   <div class="col">
                                                                             <select name="morning_start[]" id="" class="form-control">
                                                                                       @for ($i = 5; $i <=12 ; $i++)
-                                                                                      <option>{{ $i }}:00 am</option>
-                                                                                      <option>{{ $i }}:30 am</option>
+                                                                                      <option value="{{ $i }}:00" >{{ $i }}:00 am</option>
+                                                                                      <option value="{{ $i }}:30">{{ $i }}:30 am</option>
                                                                                 
                                                                             @endfor
                                                                             </select>
@@ -59,8 +59,8 @@
                                                                   <div class="col">
                                                                             <select name="morning_end[]"" id="" class="form-control">
                                                                                       @for ($i = 5; $i <=12 ; $i++)
-                                                                                      <option>{{ $i }}:00 am</option>
-                                                                                      <option>{{ $i }}:30 am</option>
+                                                                                      <option value="{{ $i }}:00" >{{ $i }}:00 am</option>
+                                                                                      <option value="{{ $i }}:30">{{ $i }}:30 am</option>
                                                                                 
                                                                             @endfor
                                                                             </select>
@@ -72,8 +72,8 @@
                                                                   <div class="col">
                                                                             <select name="afternoon_start[]" id="" class="form-control">
                                                                                       @for ($i = 1; $i <=11 ; $i++)
-                                                                                      <option>{{ $i }}:00 pm</option>
-                                                                                      <option>{{ $i }}:30 pm</option>
+                                                                                      <option value="{{ $i }}:00" >{{ $i }}:00 pm</option>
+                                                                                      <option value="{{ $i }}:30">{{ $i }}:30 pm</option>
                                                                                 
                                                                             @endfor
                                                                             </select>
@@ -81,8 +81,8 @@
                                                                   <div class="col">
                                                                             <select name="afternoon_end[]" id="" class="form-control">
                                                                                       @for ($i = 1; $i <=11 ; $i++)
-                                                                                      <option>{{ $i }}:00 pm</option>
-                                                                                      <option>{{ $i }}:30 pm</option>
+                                                                                      <option value="{{ $i }}:00" >{{ $i }}:00 pm</option>
+                                                                                      <option value="{{ $i }}:30">{{ $i }}:30 pm</option>
                                                                                 
                                                                             @endfor
                                                                             </select>
