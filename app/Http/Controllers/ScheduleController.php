@@ -13,11 +13,12 @@ class ScheduleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private $days = [
+        'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'
+    ];
     public function index()
     {
-        $days = [
-            'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'
-        ];
+
         $workDays = WorkDay::where('user_id', '=', \Auth::user()->id)->get();
         $workDays->map(function ($workDay) {
             $workDay->morning_start = (new Carbon($workDay->morning_start))->format('g:i A');
@@ -26,6 +27,7 @@ class ScheduleController extends Controller
             $workDay->afternoon_end = (new Carbon($workDay->afternoon_end))->format('g:i A');
         });
         // return $workDays;
+        $days = $this->days; 
         return view('schedule', compact('days', 'workDays'));
     }
 
@@ -47,13 +49,21 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
+        
         $active = $request['active'] ?: [];
         $morning_start = $request['morning_start'];
         $morning_end = $request['morning_end'];
         $afternoon_start = $request['afternoon_start'];
         $afternoon_end = $request['afternoon_end'];
-
+        $errors = [];
         for ($i=0; $i < 7; $i++) { 
+            if ($morning_start[$i] > $morning_end[$i]) {
+                $errors[] = 'El horario de la mañana son inconsistentes para el dia '. $this->days[$i];
+                
+            }
+            if ($afternoon_start[$i] > $afternoon_end[$i]) {
+                $errors[] = 'El horario de la tarde son inconsistentes para el dia '. $this->days[$i];
+            }
             WorkDay::updateOrCreate(
                 [
                     'day' => $i,
@@ -69,7 +79,11 @@ class ScheduleController extends Controller
             );
         }
 
-        return back();
+        if (count($errors) > 0) {
+            return back()->with(compact('errors'));
+        }
+        $notification = 'Se ha actualizado el horario de trabajo';
+        return redirect()->route('schedule.index')->with(compact('notification'));
     }
 
     /**

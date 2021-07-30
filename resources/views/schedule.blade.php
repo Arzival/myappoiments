@@ -17,13 +17,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-                    @if (session('notification'))
+                @if (session('notification'))
+                    <div class="card-body">
                         <div class="alert alert-success" role="alert">
                             {{ session('notification') }}
                         </div>
-                    @endif
-                </div>
+                    </div>
+                @endif
+
+                @if (session('errors'))
+                    <div class="card-body">
+                        <div class="alert alert-danger" role="alert">
+                            Los cambios se guardaron pero hay algun(os) error(es):
+                            <ul>
+                                @foreach (session('errors') as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endif
+
                 <div class="table-responsive">
                     <!-- Projects table -->
                     <table class="table align-items-center table-flush">
@@ -55,12 +69,12 @@
                                                     class="form-control">
                                                     @for ($i = 5; $i <= 12; $i++)
                                                         <option
-                                                            value="{{ $i }}:00"
+                                                            value="{{ ($i < 10 ? '0' : '') . $i }}:00"
                                                             @if ($i . ':00 AM' == $workDay->morning_start) selected @endif>
                                                             {{ $i }}:00
                                                             AM</option>
                                                         <option
-                                                            value="{{ $i }}:30"
+                                                            value="{{ ($i < 10 ? '0' : '') . $i }}:30"
                                                             @if ($i . ':30 AM' == $workDay->morning_start) selected @endif>
                                                             {{ $i }}:30
                                                             AM</option>
@@ -74,12 +88,12 @@
                                                     form-control">
                                                     @for ($i = 5; $i <= 12; $i++)
                                                         <option
-                                                            value="{{ $i }}:00"
+                                                            value="{{ ($i < 10 ? '0' : '') . $i }}:00"
                                                             @if ($i . ':00 AM' == $workDay->morning_end) selected @endif>
                                                             {{ $i }}:00
                                                             AM</option>
                                                         <option
-                                                            value="{{ $i }}:30"
+                                                            value="{{ ($i < 10 ? '0' : '') . $i }}:30"
                                                             @if ($i . ':30 AM' == $workDay->morning_end) selected @endif>
                                                             {{ $i }}:30
                                                             AM</option>
