@@ -64,3 +64,5 @@ Route::middleware(['auth','admin'])->group(function () {
 Route::middleware(['auth','doctor'])->group(function () {
     Route::resource('schedule', 'App\Http\Controllers\ScheduleController');
 });
+
+Route::resource('appointment', 'App\Http\Controllers\AppoimentController');

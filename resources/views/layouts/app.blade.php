@@ -50,6 +50,8 @@
     @endguest
 
     <script src="{{ asset('/vendor/jquery/dist/jquery.min.js') }}"></script>
+    @yield('scripts')
+
     <script
         src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}">
     </script>
@@ -58,5 +60,6 @@
 
     <!-- Argon JS -->
     <script src="{{ asset('/js/argon.js?v=1.0.0"') }}></script>
+    
     </body>
 </html>

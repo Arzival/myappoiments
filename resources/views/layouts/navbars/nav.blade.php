@@ -73,7 +73,7 @@
 
                         <h6 class="navbar-heading text-muted">Menú</h6>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('specialty.index') }}">
+                            <a class="nav-link" href="{{ route('appointment.create') }}">
                                 <i class="ni ni-watch-time text-blue"></i> {{ __('Reservar cita') }}
                             </a>
                         </li>
