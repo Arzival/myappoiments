@@ -40,7 +40,7 @@
                                     {{ $specialty->name }}
                                 </th>
                                 <td>
-                                    {{ $specialty->description }}
+                                    {{ Str::limit($specialty->description, 80, '(...)') }}
                                 </td>
                                 <td>
                                     <a href="{{ route('specialty.edit', $specialty) }}"

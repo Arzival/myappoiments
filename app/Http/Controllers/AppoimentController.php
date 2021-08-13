@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appoiment;
+use App\Models\Specialty;
 use Illuminate\Http\Request;
 
 class AppoimentController extends Controller
@@ -24,7 +25,8 @@ class AppoimentController extends Controller
      */
     public function create()
     {
-        return view('appoiment.create');
+        $specialties = Specialty::all();
+        return view('appoiment.create', compact('specialties'));
     }
 
     /**

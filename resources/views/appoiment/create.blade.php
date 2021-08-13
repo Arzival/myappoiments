@@ -20,7 +20,10 @@
                     <div class="form-group">
                         <label for="name">Especialidad</label>
                         <select name="" id="" class="form-control">
-
+                            <option value="">Seleccione una opción</option>
+                            @foreach($specialties as $speciality)
+                                <option value="{{ $speciality->id }}">{{ $speciality->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group">
@@ -46,11 +49,6 @@
                         <input type="text" name="phone" class="form-control">
                     </div>
 
-                    <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        <input type="text" name="password" class="form-control"
-                            value="{{ old('password', Str::random(8)) }}">
-                    </div>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
             </div>

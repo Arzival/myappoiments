@@ -10,4 +10,8 @@ class Specialty extends Model
     use HasFactory;
 
     protected $fillable = ['name','description'];
+
+    public function users(){
+        return $this->belongsToMany('App\Models\User');
+    }
 }
