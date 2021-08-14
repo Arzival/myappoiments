@@ -48,7 +48,7 @@ class DoctorController extends Controller
         ];
         $this->validate($request,$rules);
 
-        User::create([
+        $user = User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'dni' => $request['dni'],
@@ -57,6 +57,8 @@ class DoctorController extends Controller
             'password' =>  Hash::make($request['password']),
             'role' => 'doctor',
         ]);
+
+        $user->specialties()->attach($request['specialties']);
 
         $notification = 'Se agrego de forma correcta';
 
@@ -82,7 +84,8 @@ class DoctorController extends Controller
      */
     public function edit($id)
     {
-        return view('doctors.edit',['doctor' => User::findorFail($id)]);
+        $specialties = Specialty::all();
+        return view('doctors.edit',['doctor' => User::findorFail($id)],compact('specialties'));
     }
 
     /**

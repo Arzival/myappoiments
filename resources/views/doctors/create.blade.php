@@ -40,10 +40,9 @@
 
                     <div class="form-group">
                         <label for="specialties">Especialidades</label>
-                        <select name="specialties" id="" class="form-control">
-                            <option value="">Seleccione una especialidad</option>
+                        <select name="specialties[]" id="" class="form-control" multiple>
                             @foreach($specialties as $specialty)
-                                <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
+                                <option value="{{ $specialty->id }}">{{ $specialty->name }} ]</option>
                             @endforeach
                         </select>
                     </div>
