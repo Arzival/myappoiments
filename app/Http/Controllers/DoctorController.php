@@ -85,7 +85,8 @@ class DoctorController extends Controller
     public function edit($id)
     {
         $specialties = Specialty::all();
-        return view('doctors.edit',['doctor' => User::findorFail($id)],compact('specialties'));
+        $specialties_id = User::find($id)->specialties()->pluck('specialties.id');
+        return view('doctors.edit',['doctor' => User::findorFail($id)],compact('specialties', 'specialties_id'));
     }
 
     /**
@@ -106,7 +107,7 @@ class DoctorController extends Controller
 
         $this->validate($request,$rules);
 
-        User::where('id',$id)->update([
+         User::where('id',$id)->update([
             'name' => $request['name'],
             'email' => $request['email'],
             'dni' => $request['dni'],
@@ -115,6 +116,8 @@ class DoctorController extends Controller
             'password' =>  Hash::make($request['password']),
         ]);
 
+        $user = User::findorFail($id);
+        $user->specialties()->sync($request['specialties']);
         
         $notification = 'Se modifico de forma correcta';
 

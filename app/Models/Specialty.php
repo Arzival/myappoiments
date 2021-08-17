@@ -12,6 +12,6 @@ class Specialty extends Model
     protected $fillable = ['name','description'];
 
     public function users(){
-        return $this->belongsToMany('App\Models\User');
+        return $this->belongsToMany('App\Models\User')->withTimestamps();
     }
 }

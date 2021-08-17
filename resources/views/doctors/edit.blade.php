@@ -1,9 +1,4 @@
-@php
-$id = $doctor->specialties->implode('id', ',');
-$idArray = explode(',', $id);
-@endphp
 @extends('layouts.app')
-
 @section('content')
     <div>
         <div class="card shadow">
@@ -41,20 +36,11 @@ $idArray = explode(',', $id);
 
                     <div class="form-group">
                         <label for="specialties">Especialidades</label>
-                        <select name="specialties[]" id="specialties"
-                            class="form-control" multiple>
-                            @foreach ($specialties as $key => $specialty)
-                                <option value="{{ $specialty->id }}"
-                                    @php
-                                        try {
-                                            if ($specialty->id == $idArray[$key]) {
-                                                echo 'selected';
-                                            }
-                                        } catch (\Throwable $th) {
-                                            //throw $th;
-                                        }
-                                    @endphp>{{ $specialty->name }}
-                                </option>
+                        <select name="specialties[]" id="" class="form-control"
+                            multiple>
+                            @foreach ($specialties as $specialty)
+                                <option value="{{ $specialty->id }}" @if (in_array($specialty->id, $specialties_id->toArray())) selected @endif>
+                                    {{ $specialty->name }}</option>)
                             @endforeach
                         </select>
                     </div>
