@@ -40,7 +40,7 @@
                             multiple>
                             @foreach ($specialties as $specialty)
                                 <option value="{{ $specialty->id }}" @if (in_array($specialty->id, $specialties_id->toArray())) selected @endif>
-                                    {{ $specialty->name }}</option>)
+                                    {{ $specialty->name }}</option>
                             @endforeach
                         </select>
                     </div>
