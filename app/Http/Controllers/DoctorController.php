@@ -60,6 +60,8 @@ class DoctorController extends Controller
 
         $user->specialties()->attach($request['specialties']);
 
+        
+
         $notification = 'Se agrego de forma correcta';
 
         return redirect()->route('doctors.index')->with(compact('notification'));
